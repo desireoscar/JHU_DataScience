@@ -1,13 +1,23 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This function creates a special "matrix" object that can cache its inverse.
+## The matrix "x" is a square invertible matrix
 
-## Write a short comment describing this function
+## return: a list containing functions to
+##              1. set the matrix
+##              2. get the matrix
+##              3. set the inverse
+##              4. get the inverse
+##         this list is used as the input to cacheSolve()
 
 makeCacheMatrix <- function(x = matrix()) {
         
-                inv <- NULL
+        ## initialize an empty matrix        
+        inv <- NULL
                                 
                 set <- function(y) {
+                        
+                        ## assign the value of the matrix to an object in an environment 
+                        ## different from the current environment.
+                        
                         x <<- y
                         inv <<- NULL
                 }
